@@ -9,8 +9,11 @@ const typed = new Typed('.multiple-text', {
   
   // Mobile menu toggle
   let menu = document.querySelector('#menu-icon');
+  let cnt = document.querySelector('.top-btn');
   let navbar = document.querySelector('.navbar');
-  
+  cnt.onclick = () => {
+  cnt.classList.toggle('bx-x');
+    navbar.classList.toggle('active');}
   menu.onclick = () => {
     menu.classList.toggle('bx-x');
     navbar.classList.toggle('active');
@@ -72,11 +75,24 @@ const typed = new Typed('.multiple-text', {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const progressBars = document.querySelectorAll('.progress-line span');
+          const skillPercentages = document.querySelectorAll('.percent');
           progressBars.forEach((bar, index) => {
+            const percentage = skillPercentages[index];
+            let width = parseInt(percentage.textContent);
             setTimeout(() => {
               // The width is already set in CSS classes, this just triggers the transition
               bar.style.opacity = 1;
+              bar.style.width = `${width}%`;
             }, index * 100);
+            let current = 0;
+          const interval = setInterval(() => {
+            if (current >= width) {
+              clearInterval(interval);
+            } else {
+              current++;
+              percentage.textContent = `${current}%`;
+            }
+          }, 10);
           });
         }
       });
@@ -109,26 +125,20 @@ const typed = new Typed('.multiple-text', {
     });
   }
   document.addEventListener("DOMContentLoaded", function() {
-    // Initialize EmailJS with the correct User ID (replace with your actual User ID)
-    emailjs.init("sBDn25xwU_mDHizOJ"); // Replace with your actual User ID
+    emailjs.init("sBDn25xwU_mDHizOJ");
 
     document.getElementById("contact-form").addEventListener("submit", function(e) {
         e.preventDefault();
-
-        // Get form values
         let fullName = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         let phone = document.getElementById("phone").value;
         let subject = document.getElementById("subject").value;
         let message = document.getElementById("message").value;
-
-        // Validate form fields
         if (!fullName || !email || !phone || !subject || !message) {
             alert("❌ Please fill in all fields.");
             return;
         }
 
-        // Create template params
         let templateParams = {
             from_name: fullName,
             from_email: email,
