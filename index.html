@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from yt-portfolio-website3.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Mar 2025 21:50:13 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="refresh" content="3" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="style.css" />
-    <title>Cherkaoui Mahjoub - Protfolio</title>
+    <title>Cherkaoui Mahjoub - Portfolio</title>
   </head>
   <body>
     <header>
-      <a href="#home" class="logo">Cherkaoui Mahjoub</a>
+        <svg viewBox="0 0 200 100">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#64ffda">
+                  <animate attributeName="stop-color" values="#64ffda;#0d9359;#64ffda" dur="5s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stop-color="#0d9359">
+                  <animate attributeName="stop-color" values="#0d9359;#64ffda;#0d9359" dur="5s" repeatCount="indefinite" />
+                </stop>
+              </linearGradient>
+            </defs>
+            
+            <!-- Outer circle with pulse animation -->
+            <circle cx="100" cy="50" r="40" stroke="url(#gradient)" stroke-width="3" fill="none" opacity="0.6">
+              <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite" />
+              <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+            </circle>
+            
+            <!-- Inner circle -->
+            <circle cx="100" cy="50" r="35" stroke="url(#gradient)" stroke-width="2" fill="none" />
+            
+            <!-- The inverted "M" letter -->
+            <path d="M125,65 L113,30 L100,55 L87,30 L75,65" stroke="url(#gradient)" stroke-width="5" fill="none">
+              <animate attributeName="stroke-width" values="5;6;5" dur="2s" repeatCount="indefinite" />
+            </path>
+          </svg>
 
-      <div class="bx bx-menu" id="menu-icon"></div>
+      <div class="menu-icon" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
 
       <ul class="navbar">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -31,7 +51,8 @@
         <a href="#contact" class="nav-btn">Contact Me</a>
       </div>
     </header>
-    <section class="home" id="home">
+    
+    <section class="home reveal" id="home">
       <div class="home-content">
         <h3>Hi, There !</h3>
         <h1>Cherkaoui Mahjoub</h1>
@@ -44,10 +65,10 @@
         </p>
 
         <div class="social-media">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/mahjoub-cherkaoui-6b0198332/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Mahjoubech"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.facebook.com/majoob.debon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/gal1y_sss?igsh=MXNmc2xzb2JsZzNyYg=="><i class="fa-brands fa-instagram"></i></a>
         </div>
 
         <a href="#" class="btn">Download CV</a>
@@ -57,8 +78,250 @@
         <img src="assets/image.jpg" alt="Profile Image" />
       </div>
     </section>
+    
+    <section class="skills reveal" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        
+        <div class="stats-container">
+            <div class="stats-box">
+                <h3>14+</h3>
+                <p>Technologies</p>
+            </div>
+            <div class="stats-box">
+                <h3>1K+</h3>
+                <p>Hours of Work</p>
+            </div>
+            <div class="stats-box">
+                <h3>15+</h3>
+                <p>Projects Completed</p>
+            </div>
+        </div>
+    
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>HTML</p>
+                        <p class="percent">96%</p>
+                    </div>
+                    <div class="progress-line"><span class="html"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>CSS</p>
+                        <p class="percent">90%</p>
+                    </div>
+                    <div class="progress-line"><span class="css"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>JavaScript</p>
+                        <p class="percent">70%</p>
+                    </div>
+                    <div class="progress-line"><span class="js"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>Tailwind CSS</p>
+                        <p class="percent">90%</p>
+                    </div>
+                    <div class="progress-line"><span class="tailwind"></span></div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Frameworks & Backend</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>React JS</p>
+                        <p class="percent">50%</p>
+                    </div>
+                    <div class="progress-line"><span class="react"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>Vue JS</p>
+                        <p class="percent">60%</p>
+                    </div>
+                    <div class="progress-line"><span class="vue"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>PHP</p>
+                        <p class="percent">92%</p>
+                    </div>
+                    <div class="progress-line"><span class="php"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>Laravel</p>
+                        <p class="percent">88%</p>
+                    </div>
+                    <div class="progress-line"><span class="laravel"></span></div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Database & Others</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>SQL</p>
+                        <p class="percent">90%</p>
+                    </div>
+                    <div class="progress-line"><span class="sql"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>PostgreSQL</p>
+                        <p class="percent">80%</p>
+                    </div>
+                    <div class="progress-line"><span class="pgsql"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>Git & GitHub</p>
+                        <p class="percent">85%</p>
+                    </div>
+                    <div class="progress-line"><span class="git"></span></div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <p>REST API</p>
+                        <p class="percent">88%</p>
+                    </div>
+                    <div class="progress-line"><span class="api"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="portfolio reveal" id="portfolio">
+        <h2 class="heading">My <span>Portfolio</span></h2>
 
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <div class="portfolio-content">
+            <div class="row">
+                <img src="assets/1.jpg" alt="E-commerce Website">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Local Mind Platform</h5>
+                    </div>
+                    <div class="row-icon">
+                        <a href="https://github.com/Mahjoubech/LocalMind.git"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h4>Swlni - Application de Questions Localisées</h4>
+            </div>
+
+            <div class="row">
+                <img src="assets/2.jpg" alt="Dashboard UI">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Admin Dashboard</h5>
+                    </div>
+                    <div class="row-icon">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h4>Analytics Dashboard</h4>
+            </div>
+
+            <div class="row">
+                <img src="assets/3.jpg" alt="Blog Website">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Blog Platform</h5>
+                    </div>
+                    <div class="row-icon">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h4>Content Management System</h4>
+            </div>
+
+            <div class="row">
+                <img src="assets/4.jpg" alt="Mobile App UI">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Mobile App UI</h5>
+                    </div>
+                    <div class="row-icon">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h4>Food Delivery Application</h4>
+            </div>
+
+            <div class="row">
+                <img src="assets/5.jpg" alt="Real Estate Website">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Real Estate Platform</h5>
+                    </div>
+                    <div class="row-icon">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h4>Property Listing Website</h4>
+            </div>
+
+            <div class="row">
+                <img src="assets/6.jpg" alt="Portfolio Template">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Portfolio Template</h5>
+                    </div>
+                    <div class="row-icon">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h4>Personal Portfolio Design</h4>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact reveal" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/mahjoub-cherkaoui-6b0198332/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Mahjoubech"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/majoob.debon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/gal1y_sss?igsh=MXNmc2xzb2JsZzNyYg=="><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <p class="copyright">
+            &copy; Cherkaoui Mahjoub | All Rights Reserved
+        </p>
+    </footer>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script> 
- </body>
+  </body>
 </html>
