@@ -108,3 +108,47 @@ const typed = new Typed('.multiple-text', {
       }
     });
   }
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize EmailJS with the correct User ID (replace with your actual User ID)
+    emailjs.init("sBDn25xwU_mDHizOJ"); // Replace with your actual User ID
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Get form values
+        let fullName = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
+
+        // Validate form fields
+        if (!fullName || !email || !phone || !subject || !message) {
+            alert("❌ Please fill in all fields.");
+            return;
+        }
+
+        // Create template params
+        let templateParams = {
+            from_name: fullName,
+            from_email: email,
+            phone: phone,
+            subject: subject,
+            message: message
+        };
+
+        // Send the email via EmailJS using the template
+        emailjs.send("service_hm5mqlp", "template_j8oa6qo", templateParams)
+            .then(function(response) {
+                alert("✅ Message sent successfully!");
+                console.log("SUCCESS!", response);
+                document.getElementById("contact-form").reset(); // Reset form after sending
+            }, function(error) {
+                alert("❌ Error sending message. Check the console for details.");
+                console.error("FAILED...", error);
+            });
+    });
+});
+
+
+
