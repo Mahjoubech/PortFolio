@@ -674,6 +674,10 @@ span {
     #menu-icon {
         display: block;
     }
+    .top-btn{
+
+        display: none;
+    }
     .navbar {
         position: absolute;
         top: 100%;
@@ -730,6 +734,10 @@ span {
         width: 80vw;
         margin-top: 8rem;
     }
+    .top-btn{
+
+        display: none;
+    }
 }
 
 @media (max-width: 426px) {
@@ -740,5 +748,9 @@ span {
     }
     .skill-category {
         min-width: 100%;
+    }
+    .top-btn{
+
+        display: none;
     }
 }
