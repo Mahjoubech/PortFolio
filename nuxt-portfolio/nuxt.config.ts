@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
@@ -11,5 +12,8 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' }
       ]
     }
+  },
+  future: {
+    compatibilityVersion: 4
   }
 })
