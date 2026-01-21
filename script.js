@@ -152,7 +152,7 @@ const typed = new Typed('.multiple-text', {
             .then(function(response) {
                 alert("✅ Message sent successfully!");
                 console.log("SUCCESS!", response);
-                document.getElementById("contact-form").reset(); // Reset form after sending
+                document.getElementById("contact-form").reset(); 
             }, function(error) {
                 alert("❌ Error sending message. Check the console for details.");
                 console.error("FAILED...", error);
